@@ -1,0 +1,47 @@
+{
+    "os": "Windows-10-10.0.26100-SP0",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-04-09T08:42:49.316595",
+    "startedAt": "2024-04-09T08:42:45.493923",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "\u3010C2\u3011\u8fc1\u79fb\u5b66\u4e60\u5fae\u8c03\u8bad\u7ec3-\u8fdb\u9636\u72482.ipynb",
+    "codePathLocal": "\u3010C2\u3011\u8fc1\u79fb\u5b66\u4e60\u5fae\u8c03\u8bad\u7ec3-\u8fdb\u9636\u72482.ipynb",
+    "root": "E:\\MV-Code-202018010103-Lucy",
+    "host": "Leon",
+    "username": "61640",
+    "executable": "D:\\Software\\anaconda\\envs\\Pytorch\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2900.0,
+        "min": 0.0,
+        "max": 2900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2900.0,
+            "min": 0.0,
+            "max": 2900.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 49.9375,
+            "used": 49.70998001098633
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2060",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.372379302978516
+    }
+}

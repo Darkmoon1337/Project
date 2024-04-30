@@ -1,0 +1,3 @@
+class,trainset,valset,testset,total
+Parasitized,9645,2756,1378,13779
+Uninfected,9645,2756,1378,13779

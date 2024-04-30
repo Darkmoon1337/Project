@@ -1,0 +1,67 @@
+name: RCAN_BIX4-official
+suffix: ~  # add suffix to saved images
+model_type: SRModel
+scale: 2
+crop_border: ~  # crop border when evaluation. If None, crop the scale pixels
+num_gpu: 1  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+
+datasets:
+  val:  # the 1st test dataset
+    name: val_set5
+    type: PairedImageDataset
+    dataroot_gt: E:\SRClass\archive\cell_images\Uninfected
+    dataroot_lq: E:\SRClass\archive\cell_images\Uninfected
+    io_backend:
+      type: disk
+#  test_2:  # the 2nd test dataset
+#    name: val_set14
+#    type: PairedImageDataset
+#    dataroot_gt: ./datasets/val_set14/Set14
+#    dataroot_lq: ./datasets/val_set14/Set14_bicLRx4
+#    io_backend:
+#      type: disk
+
+#  test_3:
+#    name: div2k100
+#    type: PairedImageDataset
+#    dataroot_gt: ./datasets/DIV2K100/DIV2K_valid_HR
+#    dataroot_lq: ./datasets/DIV2K100/DIV2K_valid_bicLRx4
+#    filename_tmpl: '{}x4'
+#    io_backend:
+#      type: disk
+
+# network structures
+network_g:
+  type: RCAN
+  num_in_ch: 3
+  num_out_ch: 3
+  num_feat: 64
+  num_group: 10
+  num_block: 20
+  squeeze_factor: 16
+  upscale: 2
+  res_scale: 1
+  img_range: 255.
+  rgb_mean: [0.4488, 0.4371, 0.4040]
+
+save_img: true
+
+# path
+path:
+  pretrain_network_g: E:\BasicSR-master\BasicSR-master\net_g_3000.pth
+  strict_load_g: true
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+#  metrics:
+#    psnr: # metric name, can be arbitrary
+#      type: calculate_psnr
+#      crop_border: 4
+#      test_y_channel: false
+#    ssim:
+#      type: calculate_ssim
+#      crop_border: 4
+#      test_y_channel: false
